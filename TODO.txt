@@ -1,0 +1,9 @@
+1. Pagination
+2. Heuristics to clean headers & footers data from html
+3. Use inverted-index to filter by the order in which the words show up in documents
+4. Add "semantic search" i.e. Singular value decomposition
+5. Use euclidean distance to sort "one-word" searches
+6. Add configration pane
+7. Add ability to upload URL-lists, even better manage different URL lists i.e. indecies !?
+8. Rewrite the Bookmark parser in Python
+9. Capture and show "Did you mean" from Google search!

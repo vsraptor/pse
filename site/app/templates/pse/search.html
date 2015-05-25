@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%block page_content %}
+<div class='page-container'>
+{% import 'pse/search_results.html' as results %}
+{% if search.results_count > 0 %}
+	<div class='well well-sm'>
+		<b>Searching for:</b> <span class=badge>{{ search.query_words() }}</span>
+		<b>Result count:</b> <span class=badge>{{ search.results_count }}</span>
+		<b>Match :</b> <span class=badge>{{ 'all' if search.qp.match_all else 'any' }}</span>
+	</div>
+	{{ results.print_results(search,num_lines=15,num_chars=800) }}
+{% endif %}
+{% if google.results_count > 0 %}
+	<hr>
+	<div class='well well-sm'>
+		<b>Google search results :</b> <span class=badge>{{ google.results_count }} </span>
+	</div>
+	{{ results.print_results(google) }}
+{% endif %}
+</div>
+{%endblock%}

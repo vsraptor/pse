@@ -1,0 +1,19 @@
+{% macro print_results(so,limit=10,num_lines=5,num_chars=200) %}
+<div class="table-responsive">
+<table class='table table-condensed table-bordered' width=100%>
+	<thead><tr>
+		<th>Doc ID</th><th>Score (angle)</th><th>URL</th>
+	</tr></thead>
+	{% for info in so.results(limit=limit) %}
+	<tr class=active>
+		<td>{{ info.id }}</td>
+		<td>{{ info.score }}</td>
+		<td><a href="{{ info.url }}" target=blank>{{ info.url_text[:200] }} ...</a></td>
+	</tr>
+	<tr>
+		<td colspan=3>{{ so.excerpt(info.id,num_lines,num_chars) }} .....</td>
+	<tr>
+	{% endfor %}
+</table>
+</div>
+{% endmacro %}
