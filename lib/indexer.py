@@ -24,12 +24,6 @@ class Indexer:
 			if not url.strip() or url.strip().startswith('#') : continue
 			yield url.rstrip("\n")
 
-	@staticmethod
-	def xfiles(start_dir=Utils.tmp_dir):
-		for root,dirs,files in os.walk(start_dir) :
-			for f in files :
-				print "processed by tfidf> %s" % f
-				yield open(start_dir + '/' + f,'r').read()
 
 	@staticmethod
 	def save2file(name, string):
@@ -88,7 +82,7 @@ class Indexer:
 
 	#the file list has to be in numerical order (so that tfidf matrix doc idx follow fetch sequence) otherwise indexing goes out of touch
 	def build_file_list(self,start_dir=Utils.tmp_dir):
-		files = [ int(f.split('.')[0]) for f in listdir(start_dir) if isfile(join(start_dir,f)) ]
+		files = [ int(f.split('.')[0]) for f in listdir(start_dir) if isfile(join(start_dir,f)) and f.endswith('.txt') ]
 		files.sort()
 		#!fixme : check for gaps
 		self.file_list = [ str(f) + ".txt" for f in files ]
