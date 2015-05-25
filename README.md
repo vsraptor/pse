@@ -52,7 +52,7 @@ Now you have to run the indexer to create the tfidf index matricies.
 > python idx.py
 ```
 
-## Run the cmd-line app or the web-app
+### Run the cmd-line app or the web-app
 
 There cmd line app, mainly for testing purposes.
 You can run it like this :
