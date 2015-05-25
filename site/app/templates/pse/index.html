@@ -3,5 +3,19 @@
 {%block page_content %}
 <div class='page-container'>
 	<h3>Personal search engine</h3>
+	Search rules :
+	<hr>
+	<ul>
+		<li>If you use the plus sign '+' in front of any word this will force the PSE to show only documents
+			that match all the words Ex: <b>"history +biology"</b>, will return less results than <b>"history biology"</b>.
+			It does not matter wich word have the plus sign.
+		</li>
+		<li>If you want to exclude documents that contain specific words use the minus sign <b>'-'</b> for Ex.:
+			<b>"history -biology"</b>
+		</li>
+		<li>If you use quotes the PSE will strip them out for its own search, but they will be passed to Google search.
+			Also all plus <b>'+'</b> signs will be removed for Google.
+		</li>
+	</ul>
 </div>
 {%endblock%}

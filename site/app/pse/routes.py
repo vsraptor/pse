@@ -1,10 +1,6 @@
 from flask import render_template, url_for, request, flash
 from . import pse
-from flask import g
 
-import os, sys
-libdir = os.path.abspath('../lib');
-sys.path.append(libdir)
 from search import SearchException
 from bmark_search import BmarkSearch
 from google_search import GoogleSearch
@@ -17,7 +13,6 @@ def index():
 
 @pse.route('/search', methods=['POST','GET'])
 def search():
-	#g.log = Utils.init_logger('search.log')
 	google = GoogleSearch()
 	bmark = BmarkSearch()
 

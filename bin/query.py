@@ -1,7 +1,10 @@
 #!/usr/bin/env python
-import sys
 import getopt
-sys.path.append('../lib')
+import os, sys
+basedir = os.path.abspath(os.path.dirname(__file__))
+libdir = os.path.abspath(os.path.join(basedir, '../lib'));
+sys.path.append(libdir)
+
 from bmark_search import BmarkSearch
 from google_search import GoogleSearch
 
@@ -26,7 +29,6 @@ def main(arguments):
 	opts = {}
 	try:
 		for arg,opt in getopt.getopt(arguments,'gbaq:')[0] : opts[arg] = opt
-		print opts
 	except getopt.GetoptError:
 		print "query.py -b|g|a -q <query>"
 		sys.exit(2)

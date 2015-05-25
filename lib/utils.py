@@ -2,12 +2,16 @@ import csv
 import pickle
 import numpy as np
 import logging
+import os, sys
+
+
 
 class Utils:
 
 	log = None #Logger
 
-	root_dir = '/my/dev/python/pse'
+	base_dir = os.path.abspath(os.path.dirname(__file__))
+	root_dir = os.path.abspath(os.path.join(base_dir, '..'));
 	data_dir = root_dir + '/data'
 	tmp_dir  = root_dir + '/tmp'
 	log_dir  = root_dir + '/log'
