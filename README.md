@@ -20,19 +20,23 @@ and displays both results.
 
 If you don't want to polute your system-wide python installation do the following, otherwise skip this step.
 
+```
 $ # Create virtualenv in home
 > virtualenv .myenv
 $ # Activate the virtualenv
 > source .myenv/bin/activate
+```
 
 ## INSTALLATION
 
 You would need to install scikit-learn (for Tfidf support) and Flask for the web app
 
+```
 > pip install scikit-learn
 > pip install flask
 > pip install flask-script
 > pip install flask-bootstrap
+```
 
 ## url.lst
 
@@ -43,25 +47,33 @@ url.lst is simply list of URLs.
 
 Now you have to run the indexer to create the tfidf index matricies.
 
+```
 > cd bin
 > python idx.py
+```
 
 ## Run the cmd-line app or the web-app
 
 There cmd line app, mainly for testing purposes.
 You can run it like this :
 
+```
 > cd bin
 > python query.py -b -q 'python loop'
+```
 
 Or better run the Web app :
 
+```
 > cd site
 > python manage.py runserver
+```
 
 Then go to the following address :
 
+```
 http://localhost:5000
+```
 
 
 
