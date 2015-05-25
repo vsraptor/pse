@@ -11,8 +11,10 @@ and displays both results.
 
 ## Clone the PSE repository
 
-git clone https://github.com/vsraptor/pse.git
-cd pse
+```
+> git clone https://github.com/vsraptor/pse.git
+> cd pse
+```
 
 ## Virtual python enviroment
 
