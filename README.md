@@ -44,8 +44,8 @@ You would need to install scikit-learn (for Tfidf support) and Flask for the web
 
 #### url.lst
 
-Next either create manually url.lst file in data directory or generate one using bin/bm2urlst.py
-url.lst is simply list of URLs.
+Next either create manually url.lst file in data directory or generate one using bin/bm2urls.py.
+Btw url.lst is simply list of URLs.
 
 #### Create the index
 
