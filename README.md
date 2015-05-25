@@ -2,14 +2,15 @@
 
 ### What is this ?
 
-Have you been frustrated having a bootload of quality bookmarks, but whenever you need something it is much faster to
-just fire a browser and do a Google search, instead.
+Aren't you frustrated having a boatload of quality bookmarks, but not using them because it is faster to
+just fire a browser and do a Google search, instead ! Yeah, me too !
 You no longer need to do that. Enter the Personal search engine (PSE), which you can use to index your bookmarks and search like 
 you do with Google.
-But wait there is more, when you issue your search query the PSE in the background does a Google search (or other search if you implemnt it :))
+But wait there is more, when you issue your search query the PSE in the background does a Google search for you (or other search if you implement it :))
 and displays both results.
 
 The code is working but is still in Alpha stage. When it is Beta, I will write an article on http://ifni.co how it works.
+Below is a quick recepie how to install it and use it.
 
 ### INSTALLATION AND RUNNING
 
@@ -20,9 +21,9 @@ The code is working but is still in Alpha stage. When it is Beta, I will write a
 > cd pse
 ```
 
-#### Virtual python enviroment
+#### Virtual python environment
 
-If you don't want to polute your system-wide python installation do the following, otherwise skip this step.
+If you don't want to pollute your system-wide python installation do the following, otherwise skip this step.
 
 ```
 $ # Create virtualenv in home
@@ -49,7 +50,7 @@ Btw url.lst is simply list of URLs.
 
 #### Create the index
 
-Now you have to run the indexer to create the tfidf index matricies.
+Now you have to run the indexer to create the tfidf index matrices.
 
 ```
 > cd bin
