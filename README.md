@@ -2,12 +2,16 @@
 
 ### What is this ?
 
-Have you been frustrated that you have this bootload of quality of bookmarks, but whenever you need something it is much faster to
-just fire a browser and do a Google search.
+Have you been frustrated having a bootload of quality bookmarks, but whenever you need something it is much faster to
+just fire a browser and do a Google search, instead.
 You no longer need to do that. Enter the Personal search engine (PSE), which you can use to index your bookmarks and search like 
 you do with Google.
 But wait there is more, when you issue your search query the PSE in the background does a Google search (or other search if you implemnt it :))
 and displays both results.
+
+The code is working but is still in Alpha stage. When it is Beta, I will write an article on http://ifni.co how it works.
+
+### INSTALLATION AND RUNNING
 
 #### Clone the PSE repository
 
@@ -27,7 +31,7 @@ $ # Activate the virtualenv
 > source .myenv/bin/activate
 ```
 
-#### INSTALLATION
+#### Installation
 
 You would need to install scikit-learn (for Tfidf support) and Flask for the web app
 
