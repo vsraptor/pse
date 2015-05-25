@@ -9,14 +9,14 @@ you do with Google.
 But wait there is more, when you issue your search query the PSE in the background does a Google search (or other search if you implemnt it :))
 and displays both results.
 
-## Clone the PSE repository
+#### Clone the PSE repository
 
 ```
 > git clone https://github.com/vsraptor/pse.git
 > cd pse
 ```
 
-## Virtual python enviroment
+#### Virtual python enviroment
 
 If you don't want to polute your system-wide python installation do the following, otherwise skip this step.
 
@@ -27,7 +27,7 @@ $ # Activate the virtualenv
 > source .myenv/bin/activate
 ```
 
-## INSTALLATION
+#### INSTALLATION
 
 You would need to install scikit-learn (for Tfidf support) and Flask for the web app
 
@@ -38,12 +38,12 @@ You would need to install scikit-learn (for Tfidf support) and Flask for the web
 > pip install flask-bootstrap
 ```
 
-## url.lst
+#### url.lst
 
 Next either create manually url.lst file in data directory or generate one using bin/bm2urlst.py
 url.lst is simply list of URLs.
 
-## Create the index
+#### Create the index
 
 Now you have to run the indexer to create the tfidf index matricies.
 
