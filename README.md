@@ -42,6 +42,11 @@ $ # Activate the virtualenv
 You would need to install scikit-learn (for Tfidf support) and Flask for the web app
 
 ```
+> pip install csv
+> pip install lxml
+> pip install numpy
+> pip install requests
+> pip install stop_words
 > pip install scikit-learn
 > pip install flask
 > pip install flask-script
