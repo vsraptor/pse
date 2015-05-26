@@ -43,14 +43,17 @@ You would need to install scikit-learn (for Tfidf support) and Flask for the web
 > pip install flask-bootstrap
 ```
 
-#### url.lst
+#### Create url.lst file.
 
-Next either create manually url.lst file in data directory or generate one using bin/bm2urls.py.
-Btw url.lst is simply list of URLs.
+Next either create manually url.lst file in the data directory or generate one using bin/bm2urls.py.
+Btw url.lst is simply list of URLs. (This repo contains one just for tests, but better generate your own
+once you have the app running)
 
 #### Create the index
 
 Now you have to run the indexer to create the tfidf index matrices.
+This will go trough the list of URLs, fetch the pages and create index, which later
+you will use to do the searches.
 
 ```
 > cd bin
@@ -59,8 +62,8 @@ Now you have to run the indexer to create the tfidf index matrices.
 
 ### Run the cmd-line app or the web-app
 
-There cmd line app, mainly for testing purposes.
-You can run it like this :
+There cmd line app, is mainly for testing purposes.
+You can run it like this (-b bookmark search, -g google search) :
 
 ```
 > cd bin
@@ -74,7 +77,7 @@ Or better run the Web app :
 > python manage.py runserver
 ```
 
-Then go to the following address :
+Then go to the following web address :
 
 ```
 http://localhost:5000
