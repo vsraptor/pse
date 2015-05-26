@@ -1,16 +1,21 @@
-## Personal Search engine (bookmarks + external search)
+## Personal Search engine
+##### Combined Bookmarks and external search
 
 ### What is this ?
 
 Aren't you frustrated having a boatload of quality bookmarks, but not using them because it is faster to
 just fire a browser and do a Google search, instead ! Yeah, me too !
+
 You no longer need to do that. Enter the Personal search engine (PSE), which you can use to index your bookmarks and search like 
 you do with Google.
+
 But wait there is more, when you issue your search query the PSE in the background does a Google search for you (or other search if you implement it :))
 and displays both results.
 
 The code is working but is still in Alpha stage. When it is Beta, I will write an article on http://ifni.co how it works.
 Below is a quick recepie how to install it and use it.
+
+---
 
 ### INSTALLATION AND RUNNING
 
@@ -45,9 +50,9 @@ You would need to install scikit-learn (for Tfidf support) and Flask for the web
 
 #### Create url.lst file.
 
-Next either create manually url.lst file in the data directory or generate one using bin/bm2urls.py.
+Next either create manually url.lst file in the data directory or generate one using bin/bm2urlst.py.
 Btw url.lst is simply list of URLs. (This repo contains one just for tests, but better generate your own
-once you have the app running)
+once you have the app running. You can also have empty lines or comment urls with hash so they don't get included in the index)
 
 #### Create the index
 
@@ -67,7 +72,7 @@ You can run it like this (-b bookmark search, -g google search) :
 
 ```
 > cd bin
-> python query.py -b -q 'python loop'
+> python query.py -b -q 'history biology'
 ```
 
 Or better run the Web app :
