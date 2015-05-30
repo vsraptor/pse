@@ -97,5 +97,5 @@ http://localhost:5000
 
 ```
 > cd bin
->  python bm2urlst.py /path/to/bookmarks.html > ../data/url.lst
+> python bm2urlst.py /path/to/bookmarks.html > ../data/url.lst
 ```
