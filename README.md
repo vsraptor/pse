@@ -93,4 +93,9 @@ http://localhost:5000
 ```
 
 
+#### Converting firefox bookmarks to url.lst
 
+```
+> cd bin
+>  python bm2urlst.py /path/to/bookmarks.html > ../data/url.lst
+```
