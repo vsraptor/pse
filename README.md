@@ -42,6 +42,10 @@ If you don't want to pollute your system-wide python installation do the followi
 You would need to install scikit-learn (for Tfidf support) and Flask for the web app
 
 ```
+> pip install lxml
+> pip install numpy
+> pip install requests
+> pip install stop_words
 > pip install scikit-learn
 > pip install flask
 > pip install flask-script
@@ -91,4 +95,9 @@ http://localhost:5000
 ```
 
 
+#### Converting firefox bookmarks to url.lst
 
+```
+> cd bin
+> python bm2urlst.py /path/to/bookmarks.html | grep -v 'png$\|gif$\|jpg$' > ../data/url.lst
+```
