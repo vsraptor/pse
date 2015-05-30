@@ -31,9 +31,9 @@ Below is a quick recepie how to install it and use it.
 If you don't want to pollute your system-wide python installation do the following, otherwise skip this step.
 
 ```
-$ # Create virtualenv in home
+ # Create virtualenv in your pse directory
 > virtualenv .myenv
-$ # Activate the virtualenv
+ # Activate the virtualenv
 > source .myenv/bin/activate
 ```
 
@@ -65,7 +65,7 @@ you will use to do the searches.
 > python idx.py
 ```
 
-### Run the cmd-line app or the web-app
+### Run the cmd-line app
 
 There cmd line app, is mainly for testing purposes.
 You can run it like this (-b bookmark search, -g google search) :
@@ -74,6 +74,8 @@ You can run it like this (-b bookmark search, -g google search) :
 > cd bin
 > python query.py -b -q 'history biology'
 ```
+
+### Run the the web-app
 
 Or better run the Web app :
 
