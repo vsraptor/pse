@@ -3,6 +3,7 @@ import numpy as np
 from utils import Utils
 from search import Search, SearchException
 from query_parser import QueryParser
+import os.path
 
 class BmarkSearch(Search):
 
@@ -110,7 +111,7 @@ class BmarkSearch(Search):
 		return info
 
 	def excerpt(self,idx,num_lines=10,char_count=None):
-		file_name = Utils.tmp_dir + "/" + str(idx) + ".txt"
+		file_name = os.path.join(Utils.tmp_dir, str(idx) + ".txt")
 		head = ''
 		with open(file_name,"r") as txt :
 			for x in range(num_lines) : head += txt.read()

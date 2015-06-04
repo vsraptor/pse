@@ -8,7 +8,6 @@ from lxml import html
 from lxml.html.clean import clean_html
 from stop_words import get_stop_words
 from utils import Utils
-from scipy.sparse.linalg import svds
 from os import listdir
 from os.path import isfile, join
 
@@ -39,7 +38,7 @@ class Indexer:
 	def cleanup(self,string):
 #		string = html.clean.clean_html(string)
 		dom = html.fromstring(string)
-		for tag in ( "script", "style", "form", "iframe", "textarea", "a") :
+		for tag in ( "script", "style", "form", "iframe", "textarea", "a", "head") :
 			for i in dom.xpath('//'+tag): i.drop_tree()
 		body = dom.xpath('//body')
 		if not len(body) : body = dom.xpath('//html')
@@ -60,6 +59,7 @@ class Indexer:
 			resp = requests.get(url, timeout=10, allow_redirects=True, headers=user_agent)#, config=debug)
 			if resp.ok :
 				path = "../tmp/%s.txt" % self.doc_idx
+				#path = join('..','tmp', self.doc_idx + '.txt')
 				#content = Document(resp.content).summary()
 				content = self.cleanup(resp.content)
 				if not content : return None
@@ -77,7 +77,7 @@ class Indexer:
 	def files(self,start_dir=Utils.tmp_dir):
 		for f in self.file_list :
 			print "tfidf processing: %s" % f
-			yield open(start_dir + '/' + f,'r').read()
+			yield open(join(start_dir, f),'r').read()
 
 
 	#the file list has to be in numerical order (so that tfidf matrix doc idx follow fetch sequence) otherwise indexing goes out of touch
@@ -97,12 +97,12 @@ class Indexer:
 	def cleanup_old_files(self):
 		import glob
 		self.log.debug("Cleaning up : " + Utils.tmp_dir)
-		files = glob.glob(Utils.tmp_dir + "/*")
+		files = glob.glob(join(Utils.tmp_dir, "*"))
 		for f in files : os.remove(f)
 
 	def process(self):
 		self.cleanup_old_files()
-		for idx, u in enumerate( Indexer.urls(Utils.data_dir + '/url.lst') ) :
+		for idx, u in enumerate( Indexer.urls( join(Utils.data_dir,'url.lst')) ) :
 			#if idx == 10: break
 			self.fetch(u,idx)
 		self.build_file_list()
