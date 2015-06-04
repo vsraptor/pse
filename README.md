@@ -26,15 +26,15 @@ Below is a quick recepie how to install it and use it.
 > cd pse
 ```
 
-#### Virtual python environment
+#### Dependencies
 
-If you don't want to pollute your system-wide python installation do the following, otherwise skip this step.
+You probably have those already installed, but I list them here for completness.
+Skip this section in general.
 
+Dependencies :
 ```
- # Create virtualenv in your pse directory
-> virtualenv .myenv
- # Activate the virtualenv
-> source .myenv/bin/activate
+> apt-get install build-dep build-essential
+> apt-get install python-dev python-numpy python-scipy libatlas-dev libatlas3-base
 ```
 
 #### Installation
