@@ -12,7 +12,7 @@ you do with Google.
 But wait there is more, when you issue your search query the PSE in the background does a Google search for you (or other search if you implement it :))
 and displays both results.
 
-The code is working but is still in Alpha stage. When it is Beta, I will write an article on http://ifni.co how it works.
+The code is working but is still in Alpha stage. When it is Beta, I will write an article on http://www.igrok.site how it works.
 Below is a quick recepie how to install it and use it.
 
 ---
